@@ -24,7 +24,7 @@
 		}
 	});
 
-	var DigitalClock = Backbone.View.extend({
+	var DigitalClockView = Backbone.View.extend({
 		initialize: function(options) {
 			var $el = options.$el;
 			this.setElement($el);
@@ -64,7 +64,7 @@
 	var App = Backbone.View.extend({
 		start: function() {
 			var clock = new Clock();
-			var digital = new DigitalClock({
+			var digital = new DigitalClockView({
 				$el: $('#clock-digital'),
 				model:clock
 			});
