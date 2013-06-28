@@ -7,20 +7,24 @@
 	})();
 
 
-	var App = Backbone.View.extend({
+	var app = {
 		start: function() {
 			var clock = new Clock();
+			var form = new TimeForm({
+				$el: $('#clock-form'),
+				model:clock
+			}).render();
 			var digital = new DigitalClockView({
 				$el: $('#clock-digital'),
 				model:clock
-			});
+			}).render();
 
 			clock.startAuto();
 		}
-	});
+	};
 
 	$(function() {
-		var app = window.bbclock = new App();
+		window.bbclock = app;
 		app.start();
 	});
 })();

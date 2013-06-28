@@ -5,6 +5,10 @@ var Clock = Backbone.Model.extend({
 
 	_tmUpdate: null,
 
+	isAuto: function() {
+		return this.get('auto');
+	},
+
 	startAuto: function() {
 		var that = this;
 		this._tmUpdate = setInterval(function() {
