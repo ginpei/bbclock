@@ -2,9 +2,37 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
+		<link href='http://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bbclock.css" />
 		<title>Backbone Clock</title>
 	</head>
 	<body>
+		<form id="clock-form">
+			<fieldset>
+				<legend>Clock Settings</legend>
+				<p>
+					<label><input type="radio" name="mode" value="dynamic" /> Now</label>
+				</p>
+				<p>
+					<input type="radio" name="mode" value="static" />
+					<input type="text" name="hours" value="" placeholder="HH" />
+					:
+					<input type="text" name="minutes" value="" placeholder="MM" />
+					:
+					<input type="text" name="seconds" value="" placeholder="SS" />
+				</p>
+			</fieldset>
+		</form>
+		<div id="clock-digital" class="clock">
+			<span class="hours">88</span>
+			:
+			<span class="minutes">88</span>
+			:
+			<span class="seconds">88</span>
+		</div>
+		<div id="clock-anarog">
+			<canvas width="200" height="200"></canvas>
+		</div>
 		<script src="jquery.js"></script>
 		<script src="underscore.js"></script>
 		<script src="backbone.js"></script>
