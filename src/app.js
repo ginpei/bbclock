@@ -1,4 +1,5 @@
 (function() {
+	// update anarog clock
 	(function() {
 		var c = $('#clock-anarog canvas')[0].getContext('2d');
 		c.beginPath();
@@ -7,6 +8,9 @@
 	})();
 
 
+	/**
+	 * Application instance.
+	 */
 	var app = {
 		start: function() {
 			var clock = new Clock();
@@ -23,6 +27,7 @@
 		}
 	};
 
+	// Let's Roll!
 	$(function() {
 		window.bbclock = app;
 		app.start();
