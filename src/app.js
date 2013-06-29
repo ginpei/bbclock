@@ -12,6 +12,10 @@ var app = {
 			$el: $('#clock-digital'),
 			model:clock
 		}).render();
+		var anarog = new AnarogClockView({
+			$el: $('#clock-anarog'),
+			model:clock
+		}).render();
 
 		clock.startAuto();
 	}
